@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.1'>
-  <meta name="generator" content="Hexo 8.0.0">
+  <meta name="generator" content="Hexo 8.1.0">
   <meta name="Volantis" content="5.8.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1761528248908),
+    lastupdate: new Date(1761528422848),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2598,7 +2598,7 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2025-10-27T09:23:51+08:00">2025-10-27</time>
+        <time itemprop="dateCreated datePublished" datetime="2025-10-27T09:26:47+08:00">2025-10-27</time>
         
       </div>
       
@@ -2646,7 +2646,13 @@ Qu...
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <p>在Volantis主题上优雅地书写数学公式的记录。</p>
+      <h2 id="数学公式渲染引擎选择"><a href="#数学公式渲染引擎选择" class="headerlink" title="数学公式渲染引擎选择"></a>数学公式渲染引擎选择</h2><h3 id="MathJax方案（兼容性优先）"><a href="#MathJax方案（兼容性优先）" class="headerlink" title="MathJax方案（兼容性优先）"></a>MathJax方案（兼容性优先）</h3><p>适合需要完整LaTeX支持的场景，尤其推荐用于学术类内容。</p>
+<h3 id="KaTeX方案（性能优先）"><a href="#KaTeX方案（性能优先）" class="headerlink" title="KaTeX方案（性能优先）"></a>KaTeX方案（性能优先）</h3><p>适合追求加载速度的场景，KaTeX渲染速度比MathJax快约60%，但对部分复杂公式支持有限。</p>
+<h2 id="Volantis-主题内置前端渲染方案"><a href="#Volantis-主题内置前端渲染方案" class="headerlink" title="Volantis 主题内置前端渲染方案"></a>Volantis 主题内置前端渲染方案</h2><p>Volantis 6 中在 front-matter 中配置页面插件<a target="_blank" rel="noopener" href="https://volantis.js.org/v6/page-settings/?keyword=math">…</a> 即可。</p>
+<figure class="highlight yaml"><figcaption><span>front-matter</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mathjax</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">katex</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight yaml"><figcaption><span>example.md:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">渲染公式（MathJax）</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2025-10-25</span></span><br><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">mathjax</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">添加一段描述性文字</span></span><br><span class="line"></span><br><span class="line"><span class="string">
     
   </div>
   

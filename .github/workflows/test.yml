@@ -41,7 +41,7 @@ jobs:
           echo ==========
           npm ls --depth 0
           echo ==========
-          hexo clean && hexo g --safe
+          hexo clean && hexo g
 
 
       - name: Deploy
